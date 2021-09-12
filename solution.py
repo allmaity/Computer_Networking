@@ -9,7 +9,7 @@ def welcome_assignment_answers(question):
         answer = "No"
     elif question == "Is it possible to decrypt a message without a key? - Yes/No":
         answer = "No"
-    elif question == "Is it possible to decode a message wthout a key? - Yes/No":
+    elif question == "Is it possible to decode a message without a key? - Yes/No":
         answer = "No"
     elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
         answer = "No"
@@ -19,7 +19,7 @@ def welcome_assignment_answers(question):
         answer = "No"
     elif question == "What layer from the TCP/IP model the protocol DHCP belongs to? - The answer should be a numeric number":
         answer = int(5)
-    elif question == "What layer from the TCP/IP model the protocol TCP belongs to? - The answer should be a numeric number":
+    elif question == "What layer of the TCP/IP model the protocol TCP belongs to? - The answer should be a numeric number":
         answer = int(4)
     elif question == "In Slack, what is the secret passphrase posted in the #cyberfellows-computernetworking-fall2021 channel posted by a TA?":
         answer = "mTLS"
