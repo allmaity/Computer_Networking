@@ -1,7 +1,7 @@
 from socket import *
 
 
-def smtp_client(port=1025, mailserver='localhost'):
+def smtp_client(port=1025, mailserver='127.0.0.1'):
     msg = "\r\n My message"
     endmsg = "\r\n.\r\n"
 
@@ -54,15 +54,15 @@ def smtp_client(port=1025, mailserver='localhost'):
     clientSocket.send(data.encode())
     recvDATA = clientSocket.recv(1024)
     #print(recvDATA)    
-    #if recvDATA[:3] != '250': # checks return code to see if things ran well
-        #print('250 reply not received from server.')
+    #if recvDATA[:3] != '354': # checks return code to see if things ran well
+        #print('354 reply not received from server.')
     # Fill in end
 
     # Send message data.
     # Fill in start
     clientSocket.send(msg.encode())   
-    newMsg="u did it brudda"
-    clientSocket.send(newMsg.encode())     
+    # newMsg="u did it brudda"
+    # clientSocket.send(newMsg.encode())     
     # Fill in end
 
     # Message ends with a single period.
@@ -81,11 +81,11 @@ def smtp_client(port=1025, mailserver='localhost'):
     clientSocket.send(toQuit.encode())
     quitMessage = clientSocket.recv(1024)
     #print(quitMessage)
-    #if quitMessage[:3] != '250': # checks return code to see if things ran well
-        #print('250 reply not received from server.')    
+    #if quitMessage[:3] != '221': # checks return code to see if things ran well
+        #print('221 reply not received from server.')    
     clientSocket.close()
     # Fill in end
 
 
 if __name__ == '__main__':
-    smtp_client(1025, 'localhost')
+    smtp_client(1025, '127.0.0.1')
